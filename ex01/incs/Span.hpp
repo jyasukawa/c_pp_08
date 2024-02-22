@@ -12,7 +12,7 @@ class Span
 		Span &operator=(const Span &rhs);
 		~Span(void);
 
-		Span(unsigned int n);
+		Span(const unsigned int &n);
 
 		void					addNumber(const int &n);
 		void					addNumber(std::vector<int>::iterator start, std::vector<int>::iterator end);

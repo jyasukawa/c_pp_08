@@ -61,7 +61,7 @@ int	main(void)
 //     // Create a const vector<int> without using initializer list
 //     int array[] = {1, 2, 3, 4, 5};
 //     const std::vector<int> constVector(array, array + sizeof(array) / sizeof(int));
-
+// 		// std::vector コンストラクタの引数には、イテレータの範囲を指定することができます。ここでは、array の先頭から array + sizeof(array) / sizeof(int) の範囲までを指定しています。
 //     try
 //     {
 //         // Use const iterator for const container in C++98
