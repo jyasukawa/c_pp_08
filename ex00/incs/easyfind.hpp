@@ -3,6 +3,7 @@
 
 # include <iostream>
 # include <vector>
+# include <list>
 
 template <typename T>
 typename T::iterator	easyfind(T &container, const int &value)
@@ -13,7 +14,7 @@ typename T::iterator	easyfind(T &container, const int &value)
 	return (it);
 }
 
-template <typename T>
+template <typename T>//constバージョン
 typename T::const_iterator	easyfind(const T &container, const int &value)
 {
 	typename T::const_iterator it_const = std::find(container.begin(), container.end(), value);

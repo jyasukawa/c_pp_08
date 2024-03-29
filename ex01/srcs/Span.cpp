@@ -27,7 +27,7 @@ Span::~Span(void)
 	// std::cout << "Span destructor called" << std::endl;
 }
 
-Span::Span(const unsigned int &n) : _maxSize(n)
+Span::Span(const unsigned int &n) : _maxSize(n)//nに負の値を入れてもなぜかコンパイルエラーにならない、自己判断
 {
 	// std::cout << "Span unsigned int constructor called" << std::endl;
 }
@@ -43,7 +43,7 @@ void	Span::addNumber(std::vector<int>::iterator start, std::vector<int>::iterato
 {
 	if (this->_array.size() + std::distance(start, end) > this->_maxSize)
 		throw Span::AlreadyFullException();
-	this->_array.insert(this->_array.end(), start, end);
+	this->_array.insert(this->_array.end(), start, end);//コンテナthis->_arrayの末尾に範囲[start, end)に含まれる要素を挿入する
 }
 // std::distance の引数は、2つのイテレータ間の要素の個数（距離）を計算するための関数です
 // イテレータ範囲は、C++において、コンテナ内の一部の要素にアクセスするための仕組みです。イテレータはコンテナ内の要素を指し示すオブジェクトであり、イテレータ範囲はそのイテレータの開始位置と終了位置からなる範囲を指します。
